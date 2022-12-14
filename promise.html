@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+</body>
+<script>
+let print = new Promise(function(resolve,reject){
+setTimeout(function(){
+
+ resolve("success");
+ 
+},3000);
+});
+print.then(console.log);
+
+let print2 = new Promise(function(resolve,reject){
+
+setTimeout(function(){
+
+reject("err")
+
+},1000);
+
+});
+print2.catch(console.log);
+</script>
+</html>

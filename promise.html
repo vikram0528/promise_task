@@ -14,15 +14,6 @@ setTimeout(function(){
 });
 print.then(console.log);
 
-let print2 = new Promise(function(resolve,reject){
-
-setTimeout(function(){
-
-reject("err")
-
-},1000);
-
-});
-print2.catch(console.log);
+print.catch(console.log);
 </script>
 </html>

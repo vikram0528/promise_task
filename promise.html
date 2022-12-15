@@ -15,5 +15,32 @@ setTimeout(function(){
 print.then(console.log);
 
 print.catch(console.log);
+
+
+/*fun1()
+.then(fun2)
+.then(function (res1){
+console.log("res1",res1);
+
+})
+
+.catch(function (no){  //this is promise chain 
+
+console.log("no", no)
+}) */
+
+         //promise.all use passe array of promise then its return
+		 //array of result and then its exqueting parllel and then if one 
+		 //promise is reject its going to the catch.
+Promise.all([fun1(),fun2()]).then(function(success){
+
+console.log("two promise are sucess", success);
+
+}).catch(function (not){
+
+console.log("two promise are reject", not);
+});
+</script>
+</html>
 </script>
 </html>
